@@ -14,9 +14,9 @@ const FullPage = styled.div`
 
 /*eslint-disable react/prop-types */
 function ProtectedRoute({ children }) {
+    const navigate = useNavigate();
     // 1. Load the authenticated user
     const { isAuthenticated, isLoading } = useUser();
-    const navigate = useNavigate();
 
     // 2. If there is NO authenticated user, redirect to the /login
 
