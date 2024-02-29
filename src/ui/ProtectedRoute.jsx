@@ -34,7 +34,7 @@ function ProtectedRoute({ children }) {
 
     // 4. IF there IS a user, go to dashboard
 
-    return children;
+    if (isAuthenticated) return children;
 }
 
 export default ProtectedRoute;
